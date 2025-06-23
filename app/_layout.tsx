@@ -34,8 +34,14 @@ export default function RootLayout() {
 		<ThemeProvider
 			value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
 			<Stack>
+				<Stack.Protected guard={false}>
+					<Stack.Screen
+						name="(tabs)"
+						options={{ headerShown: false }}
+					/>
+				</Stack.Protected>
 				<Stack.Screen
-					name="(tabs)"
+					name="(auth)"
 					options={{ headerShown: false }}
 				/>
 				<Stack.Screen name="+not-found" />

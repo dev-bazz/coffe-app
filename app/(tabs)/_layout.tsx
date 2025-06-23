@@ -1,7 +1,11 @@
+import { Tabs, useRouter } from 'expo-router';
+import React, { useEffect,  } from 'react';
 
-import { Tabs } from 'expo-router';
-import React from 'react';
+export default function TabLayout () {
+  const router = useRouter()
+  useEffect( () => {
 
-export default function TabLayout() {
-  return <Tabs />;
+
+  }, []);
+	return <Tabs />;
 }
